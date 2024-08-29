@@ -1,0 +1,14 @@
+<!-- Primeiro exemplo de utilização do ng-template-outlet, aproveitando que de forma que a elemento do angular ng-template quando referenciado,
+ele não renderizado e muito menos aparente no DOM, com isso, primeiro exemplo para demonstrar como ng-template pode se torna visível. -->
+
+Ex1:
+
+<br>
+
+<ng-container *ngTemplateOutlet="meuTemplate"></ng-container>
+
+<ng-template #meuTemplate>
+  Template:
+  <app-meu-comp></app-meu-comp>
+</ng-template>
+

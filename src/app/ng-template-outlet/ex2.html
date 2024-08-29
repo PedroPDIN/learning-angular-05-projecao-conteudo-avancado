@@ -1,0 +1,19 @@
+<!-- Segundo exemplo de utilização do ng-template-outlet, aproveitando que de forma que a elemento do angular ng-template quando referenciado,
+ele não renderizado e muito menos aparente no DOM, com isso, segundo exemplo para demonstrar como ng-template pode se torna visível. -->
+
+Ex2:
+
+<br>
+
+<ng-container *ngIf="condition; else elseTemplate">
+  <ng-container *ngTemplateOutlet="meuTemplate2"></ng-container>
+</ng-container>
+
+<ng-template #meuTemplate2>
+  Template:
+  <app-meu-comp></app-meu-comp>
+</ng-template>
+
+<ng-template #elseTemplate>
+  Sou o else Template
+</ng-template>

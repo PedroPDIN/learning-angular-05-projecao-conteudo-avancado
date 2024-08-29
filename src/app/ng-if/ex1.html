@@ -1,0 +1,15 @@
+<!-- Primeiro exemplo de utilização do ng-if, aproveitando que de forma que a elemento do angular ng-template quando referenciado,
+ele não renderizado e muito menos aparente no DOM, com isso, primeiro exemplo para demonstrar como ng-template pode se torna visível. -->
+
+Ex1:
+
+<br>
+
+<ng-template [ngIf]="condition" [ngIfElse]="elseTemplateComIf">
+  Template:
+  <app-meu-comp></app-meu-comp>
+</ng-template>
+
+<ng-template #elseTemplateComIf>
+  Sou o else Template
+</ng-template>
